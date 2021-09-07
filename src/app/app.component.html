@@ -1,7 +1,24 @@
-Bienvenidos Estudiantes UDEC 2021 linea 1{{ title }}
+Calculadora UDEC 2021 linea 1{{ title }} <br>
 
-<input type="text" [(ngModel)]="title">
+<input type="number" [(ngModel)]="numero1" > {{numero1}} <br>
+<input type="number" [(ngModel)]="numero2" > {{numero2}} <br>
 
-<input type="button" value="da click">
+<input type="button" value="sumar" (click)="operar('s')">
+<input type="button" value="restar" (click)="operar('r')">
+<input type="button" value="multiplicar" (click)="operar('m')">
+<input type="button" value="dividir" (click)="operar('d')">
+<br>
+{{resultado}}
+<br>
+<br>
 
-<app-login></app-login>
+<input type="text" (keyup)="teclear($event)">
+    
+
+<br> 
+<br>
+    -- componente login----
+
+
+
+<app-login [resultadoHija]="resultado"></app-login>
